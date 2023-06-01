@@ -184,12 +184,12 @@ function CreateNewTodoComponent(props: {
       <div className='my-4'>
         <label htmlFor="title" className="block mb-2 text-sm font-medium text-white">What do you want to do?</label>
         <input type="text" name="title" value={todoItem.title} onChange={handleTitle} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Learn react" required autoFocus />
-        {isTodoEmpty.isTitleEmpty && <span className="text-red-400 m-2">Title can't be empty</span>}
+        {isTodoEmpty.isTitleEmpty && <span className="text-red-400 m-2">Title cannot be empty</span>}
       </div>
       <div className='my-4'>
         <label htmlFor="description" className="block mb-2 text-sm font-medium text-white">Further Description</label>
         <input type="text" name="description" value={todoItem.description} onChange={handleDescription} placeholder="Learn nav components" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
-        {isTodoEmpty.isDescEmpty && <span className="text-red-400 m-2">Description can't be empty</span>}
+        {isTodoEmpty.isDescEmpty && <span className="text-red-400 m-2">Description cannot be empty</span>}
       </div>
       <button type="submit" onClick={validateTodoAndSubmit} className="w-full my-4 text-white focus:ring-4 focus:outline-non font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">{props.isEditMode ? "Update" : "Create"} Todo</button>
       {props.isEditMode && <button type="submit" onClick={() => props.onDeleteTodo(todoItem)} className="w-full mb-4 text-white focus:ring-4 focus:outline-non font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-rose-600 hover:bg-rose-700 focus:ring-rose-800">Delete Todo</button>}
